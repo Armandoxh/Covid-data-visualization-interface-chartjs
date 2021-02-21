@@ -1,8 +1,11 @@
 
 import React from 'react'
 
-const InputFromUserView = () => (
+const InputFromUserView = () => {
 
+    // const [selState, changeSelState] = useState('ny');
+
+    return(
     <div className="InputForm">
     <form role="form">
       <div className="form-group">
@@ -64,15 +67,15 @@ const InputFromUserView = () => (
         </div>
       </div>
       <div className="form-group">
-        <input type="date" value="2020-01-01"></input>
+        <input type="date" defaultValue="2020-01-01"></input>
       </div>
 
-      <button type="submit" className="btn btn-primary">
+      <button type="submit"  className="btn btn-primary">
         Submit
       </button>
     </form>
   </div>
- 
-)
+    )
+}
 
 export default InputFromUserView

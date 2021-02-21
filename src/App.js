@@ -27,9 +27,7 @@ class App extends Component {
                     displayed after this date.
                     <br></br>
                   </p>
-                  <p>
-                    <h6>Happy Tracking!</h6>
-                  </p>
+                  <p></p>
                 </div>
               </div>
             </div>
