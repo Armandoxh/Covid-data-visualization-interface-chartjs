@@ -7,9 +7,9 @@ const InputFromUserView = () => (
     <form role="form">
       <div className="form-group">
         <div className="form-group">
-          <label for="inputState">State</label>
+          <label htmlFor="inputState">State</label>
           <select id="inputState" className="form-control">
-            <option selected>Choose...</option>
+            <option defaultValue>Choose...</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>

@@ -4,24 +4,25 @@ import axios from 'axios'
 import ApiResponse from './ApiResponse'
 export default function DataGraph(){
 
-    const [data , requestData] = useState('')
+    const [myData , requestData] = useState('5') //default value for the state
  
-    useEffect(() => {
+    useEffect(() => {  //when the page first renders only
         getData();
    }, []);
 
-    const getData = ()=>{
+    const getData = ()=>{//promise : asynchronous, im waiting for it to get me something and i have to handle if it messes up
         axios.get(`${apiBuilder}`)
-        .catch(error => console.log(`Error: ${error}`))
-        .then((response)=>{
+        .catch(error => console.log(`Error: ${error}`)) //promise wasn't kept 
+        .then((response)=>{  //promise delivered
             requestData(response)
-             console.log( response.data)
+             console.log( response)
         })
-     
     }
-
+   
+    
+console.log(myData.data)
     return (
-        <ApiResponse data={data.data}/>
+        <ApiResponse apiData={myData.data}/>
     )
 
 }
