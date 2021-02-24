@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputFromUserView = ({ handleUserInput }) => {
+const StateSelector = ({ handleUserInput }) => {
   // const [selState, changeSelState] = useState('ny');
 
   function handleSubmit(e) {
@@ -81,4 +81,4 @@ const InputFromUserView = ({ handleUserInput }) => {
   );
 };
 
-export default InputFromUserView;
+export default StateSelector;

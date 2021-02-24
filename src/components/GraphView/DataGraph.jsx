@@ -11,17 +11,17 @@ export default function DataGraph({ state }) {
 
   const [inputState, changeState] = useState("ny");
 
+  //Problem
   useEffect(() => {
     changeState(state);
     axios
-
       .get(`${rootSingleStateHistorical}${inputState}/daily.json`)
       .catch((error) => console.log(`Error: ${error}`)) //promise wasn't kept
       .then((response) => {
         //promise delivered
         requestSingleState(response);
       });
-  }, [state]);
+  }, []);
 
   const getData = () => {
     //promise : asynchronous, im waiting for it to get me something and i have to handle if it messes up

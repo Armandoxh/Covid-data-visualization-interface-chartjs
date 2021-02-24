@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import Contacts from "./components/DataView";
+import CovidDataContainer from "./containers/CovidDataContainer/CovidDataContainer";
+import SelectStateView from "./containers/SelectStateView/SelectStateView";
 class App extends Component {
   state = {};
 
@@ -33,7 +35,8 @@ class App extends Component {
             </div>
           </div>
         </header>
-        <Contacts />
+        {/* <Contacts /> */}
+        <SelectStateView />
       </div>
     );
   }

@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import InputForm from "./InputForm/InputForm";
-import DataGraph from "./GraphView/DataGraph";
-
-const Contacts = (props) => {
+import InputForm from "../InputForm/InputForm";
+import CovidDataContainer from "../CovidDataContainer/CovidDataContainer";
+const SelectStateView = (props) => {
   const [stateSel, changeUserInput] = useState("");
 
   function handleUserInput(newInput) {
     let lowerCaseInput = newInput.toLowerCase();
     changeUserInput(lowerCaseInput);
-    console.log(stateSel);
   }
   return (
     <div>
@@ -19,7 +17,9 @@ const Contacts = (props) => {
               <div className="col-md-3">
                 <InputForm handleUserInput={handleUserInput} state={stateSel} />
               </div>
-              <div className="col-md-6"></div>
+              <div className="col-md-6">
+                <CovidDataContainer state={stateSel} />
+              </div>
               <div className="col-md-3">
                 <div className="btn-group btn-group-vertical pb-5" role="group">
                   <button className="btn btn-secondary" type="button">
@@ -44,4 +44,4 @@ const Contacts = (props) => {
     </div>
   );
 };
-export default Contacts;
+export default SelectStateView;
