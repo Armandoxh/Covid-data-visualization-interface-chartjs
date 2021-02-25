@@ -14,11 +14,6 @@ class App extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="jumbotron">
-                  {/* <h1>The General Assembly taught COVID Tracking API</h1>
-                  <h3>
-                    Brought to you by the lessons of August, Tosin, and Adonis
-                  </h3> */}
-                  <h5>Built and developed by Armando Xhimanki</h5>
                   <p>
                     Coronavirus data lookup. Data is obtained from{" "}
                     <a href="https://covidtracking.com/data/api">

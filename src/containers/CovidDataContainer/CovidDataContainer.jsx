@@ -4,13 +4,15 @@ import axios from "axios";
 
 const CovidDataContainer = ({ state }) => {
   const [covidData, setCovidData] = useState([]);
-  const [place, setPlace] = useState("ny");
+  const [place, setPlace] = useState("ga");
   const rootSingleStateHistorical = "https://api.covidtracking.com/v1/states/";
+
+  console.log("State", state, "Place ", place);
 
   useEffect(() => {
     setPlace(state);
     fetchData();
-  }, []);
+  }, [state]);
 
   const fetchData = () => {
     axios

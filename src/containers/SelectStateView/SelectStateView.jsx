@@ -17,25 +17,10 @@ const SelectStateView = (props) => {
               <div className="col-md-3">
                 <InputForm handleUserInput={handleUserInput} state={stateSel} />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-9">
                 <CovidDataContainer state={stateSel} />
               </div>
-              <div className="col-md-3">
-                <div className="btn-group btn-group-vertical pb-5" role="group">
-                  <button className="btn btn-secondary" type="button">
-                    Compare to Yesterday
-                  </button>
-                  <button className="btn btn-secondary" type="button">
-                    Compare to This Time Last Year
-                  </button>
-                  <button className="btn btn-secondary" type="button">
-                    Compare to This Time Last Month
-                  </button>
-                  <button className="btn btn-secondary" type="button">
-                    Data View
-                  </button>
-                </div>
-              </div>
+              {/* <div className="col-md-3"></div> */}
             </div>
           </div>
         </div>

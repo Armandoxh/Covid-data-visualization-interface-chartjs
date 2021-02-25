@@ -7,38 +7,62 @@ const StateView = ({ covidData }) => {
   //     thisStateDeaths: stateDeaths,
   //   });
   //   console.log(thisStateDeaths[2] + thisStateDeaths[3]);
-  console.log("Covid Data", covidData);
+  console.log(covidData);
   const chartData = {
-    labels: covidData.map((data) => {
-      return data.date;
-    }),
+    labels: covidData
+      .map((data) => {
+        return data.date;
+      })
+      .reverse(),
     datasets: [
       {
         label: "Total Deaths",
         // data: [25000, 30000, 35000, 39000],
-        data: covidData.map((data) => {
-          return data.death;
-        }),
+        data: covidData
+          .map((data) => {
+            return data.death;
+          })
+          .reverse(),
 
-        fill: true,
-        backgroundColor: "rgba(75,192,192,0.2)",
+        fill: false,
+        backgroundColor: "rgba(150, 40, 27, 1)",
+        borderColor: "rgba(150, 40, 27, 1)",
+      },
+      {
+        label: "Positive Cases",
+        // data: [25000, 30000, 35000, 39000],
+        data: covidData
+          .map((data) => {
+            return data.positiveIncrease;
+          })
+          .reverse(),
+
+        fill: false,
+        backgroundColor: "rgba(34, 167, 240, 1)",
         borderColor: "rgba(75,192,192,1)",
       },
     ],
   };
-  console.log("Chart Data", chartData.datasets);
   const options = {
     title: {
       display: true,
       text: "Coronavirus Deaths",
     },
     scales: {
+      xAxes: [
+        {
+          ticks: {
+            // stepSize: ,
+          },
+        },
+      ],
       yAxes: [
         {
           ticks: {
-            suggestedMin: 25000,
-            suggestedMax: 50000,
+            // suggestedMin: 25000,
+            // suggestedMax: ,
           },
+          stacked: false,
         },
       ],
     },
