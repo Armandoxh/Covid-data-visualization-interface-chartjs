@@ -24,6 +24,7 @@ const CovidDataContainer = ({ state }) => {
       });
   };
 
+  console.log(covidData);
   return (
     <div>
       <StateView covidData={covidData} />

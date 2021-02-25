@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputForm from "../InputForm/InputForm";
 import CovidDataContainer from "../CovidDataContainer/CovidDataContainer";
+import CurrentStateTotals from "../CovidDataContainer/CurrentStateTotals";
 const SelectStateView = (props) => {
   const [stateSel, changeUserInput] = useState("");
 
@@ -17,10 +18,12 @@ const SelectStateView = (props) => {
               <div className="col-md-3">
                 <InputForm handleUserInput={handleUserInput} state={stateSel} />
               </div>
-              <div className="col-md-9">
+              <div className="col-md-6">
                 <CovidDataContainer state={stateSel} />
               </div>
-              {/* <div className="col-md-3"></div> */}
+              <div className="col-md-3">
+                <CurrentStateTotals state={stateSel} />
+              </div>
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@ const StateView = ({ covidData }) => {
   //     thisStateDeaths: stateDeaths,
   //   });
   //   console.log(thisStateDeaths[2] + thisStateDeaths[3]);
-  console.log(covidData);
   const chartData = {
     labels: covidData
       .map((data) => {
