@@ -29,7 +29,6 @@ export default function ApiResponse(props) {
   useEffect(() => {
     setDeaths(calculateDeaths(props.singleStateData));
   }, [props.singleStateData]);
-  //   console.log(calculateDeaths("Final State Deaths", stateDeaths));
 
   return (
     <Router>

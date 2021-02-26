@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputForm from "../InputForm/InputForm";
 import CovidDataContainer from "../CovidDataContainer/CovidDataContainer";
 import CurrentStateTotals from "../CovidDataContainer/CurrentStateTotals";
+import SupplementalDataView from "../CovidDataContainer/SupplementalDataView";
 const SelectStateView = (props) => {
   const [stateSel, changeUserInput] = useState("");
 
@@ -22,13 +23,14 @@ const SelectStateView = (props) => {
                 <CovidDataContainer state={stateSel} />
               </div>
               <div className="col-md-3">
-                <CurrentStateTotals state={stateSel} />
+                {/* <CurrentStateTotals state={stateSel} /> */}
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* <InputTest /> */}
+      <SupplementalDataView state={stateSel} />
     </div>
   );
 };

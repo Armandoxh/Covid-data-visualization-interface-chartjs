@@ -26,33 +26,42 @@ const CovidDataContainer = ({ state }) => {
   };
   //   console.log(covidData);
   if (!(covidData.data === undefined)) {
+    console.log("12341234", covidData.data);
     return (
       <div>
-        <container>
-          <h1> Data Totals</h1>
-          <h3>State: {covidData.data.state}</h3>
-          <dl class="row">
-            <dt class="col-sm-3 pb-4">Positive Cases </dt>
-            <dd class="col-sm-9">{covidData.data.positive}</dd>
+        <h1> Data Totals</h1>
+        <h3>State: {covidData.data.state}</h3>
+        <dl className="row">
+          <dt className="col-sm-3 pb-4">Positive Cases </dt>
+          <dd className="col-sm-9">
+            {covidData.data.positive.toLocaleString()}
+          </dd>
 
-            <dt class="col-sm-3 pb-4"> Deaths</dt>
-            <dd class="col-sm-9">
-              <p>{covidData.data.death}</p>
-            </dd>
+          <dt className="col-sm-3 pb-4"> Deaths</dt>
+          <dd className="col-sm-9">
+            {/* <p>{covidData.data.death.toLocaleString()}</p> */}
+          </dd>
 
-            <dt class="col-sm-3 pb-4">In Hospital </dt>
-            <dd class="col-sm-9">{covidData.data.hospitalizedCurrently}</dd>
+          <dt className="col-sm-3 pb-4">In Hospital </dt>
+          <dd className="col-sm-9">
+            {/* {covidData.data.hospitalizedCurrently.toLocaleString()} */}
+          </dd>
 
-            <dt class="col-sm-3 pb-4">In ICU </dt>
-            <dd class="col-sm-9">{covidData.data.inIcuCurrently}</dd>
+          <dt className="col-sm-3 pb-4">In ICU </dt>
+          <dd className="col-sm-9">
+            {/* {covidData.data.inIcuCurrently.toLocaleString()} */}
+          </dd>
 
-            <dt class="col-sm-3 pb-4"> Total Tests</dt>
-            <dd class="col-sm-9">{covidData.data.totalTestsViral}</dd>
+          <dt className="col-sm-3 pb-4"> Total Tests</dt>
+          <dd className="col-sm-9">
+            {/* {covidData.data.totalTestsViral.toLocaleString()} */}
+          </dd>
 
-            <dt class="col-sm-3 pb-4">Recovered</dt>
-            <dd class="col-sm-9">{covidData.data.recovered}</dd>
-          </dl>
-        </container>
+          <dt className="col-sm-3 pb-4">Recovered</dt>
+          <dd className="col-sm-9">
+            {/* {covidData.data.recovered.toLocaleString()} */}
+          </dd>
+        </dl>
       </div>
     );
   } else return <div>hello</div>;

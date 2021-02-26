@@ -3,6 +3,7 @@ import "./App.css";
 import Contacts from "./components/DataView";
 import CovidDataContainer from "./containers/CovidDataContainer/CovidDataContainer";
 import SelectStateView from "./containers/SelectStateView/SelectStateView";
+import SupplementalDataView from "./containers/CovidDataContainer/SupplementalDataView";
 class App extends Component {
   state = {};
 

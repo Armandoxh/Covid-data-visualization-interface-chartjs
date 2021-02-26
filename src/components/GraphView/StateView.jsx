@@ -14,19 +14,19 @@ const StateView = ({ covidData }) => {
       })
       .reverse(),
     datasets: [
-      {
-        label: "Total Deaths",
-        // data: [25000, 30000, 35000, 39000],
-        data: covidData
-          .map((data) => {
-            return data.death;
-          })
-          .reverse(),
+      //   {
+      //     label: "Total Deaths",
+      //     // data: [25000, 30000, 35000, 39000],
+      //     data: covidData
+      //       .map((data) => {
+      //         return data.death;
+      //       })
+      //       .reverse(),
 
-        fill: false,
-        backgroundColor: "rgba(150, 40, 27, 1)",
-        borderColor: "rgba(150, 40, 27, 1)",
-      },
+      //     fill: false,
+      //     backgroundColor: "rgba(150, 40, 27, 1)",
+      //     borderColor: "rgba(150, 40, 27, 1)",
+      //   },
       {
         label: "Positive Cases",
         // data: [25000, 30000, 35000, 39000],

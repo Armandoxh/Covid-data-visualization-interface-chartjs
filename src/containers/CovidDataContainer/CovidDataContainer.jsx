@@ -7,8 +7,6 @@ const CovidDataContainer = ({ state }) => {
   const [place, setPlace] = useState("ga");
   const rootSingleStateHistorical = "https://api.covidtracking.com/v1/states/";
 
-  console.log("State", state, "Place ", place);
-
   useEffect(() => {
     setPlace(state);
     fetchData();
@@ -20,11 +18,11 @@ const CovidDataContainer = ({ state }) => {
       .catch((error) => console.log(`Error: ${error}`)) //promise wasn't kept
       .then((response) => {
         //promise delivered
+        // console.log(response);
         setCovidData(response.data);
       });
   };
 
-  console.log(covidData);
   return (
     <div>
       <StateView covidData={covidData} />
